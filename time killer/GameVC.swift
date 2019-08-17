@@ -112,7 +112,7 @@ class GameVC: UIViewController {
                 }
         }else if rightMove == true{
             if hero.frame.maxX < self.view.frame.size.width{
-                self.hero.frame.origin.x += 5
+                    self.hero.frame.origin.x += 5
             }else{
                 self.hero.frame.origin.x = 0 - self.hero.frame.size.width
             }

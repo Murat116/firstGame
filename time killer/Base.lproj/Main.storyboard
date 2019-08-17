@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RPq-Rb-q9S">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="VRj-pe-fMh">
+            <objects>
+                <viewController id="RPq-Rb-q9S" customClass="ViewController" customModule="time_killer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i1d-UI-oJI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3y-HD-v8N">
+                                <rect key="frame" x="0.0" y="170" width="320" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="aC5-l6-MtM" kind="presentation" id="Qcx-KR-q8s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i3y-HD-v8N" firstAttribute="top" secondItem="YMb-XK-Zpq" secondAttribute="top" constant="150" id="9ls-hM-PFo"/>
+                            <constraint firstItem="YMb-XK-Zpq" firstAttribute="trailing" secondItem="i3y-HD-v8N" secondAttribute="trailing" id="qXp-LC-ZlV"/>
+                            <constraint firstItem="i3y-HD-v8N" firstAttribute="leading" secondItem="YMb-XK-Zpq" secondAttribute="leading" id="yrj-ig-h7S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YMb-XK-Zpq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikK-NH-Xsg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="7nX-xx-r61">
+            <objects>
+                <viewController id="aC5-l6-MtM" customClass="GameVC" customModule="time_killer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="20" contentMode="scaleToFill" id="MOQ-o6-26G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-Zj-ntR">
+                                <rect key="frame" x="10" y="418" width="300" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DaK-GL-9Yt">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="50"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Left">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name=".SFNSText"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="leftBtn:" destination="aC5-l6-MtM" eventType="touchDown" id="ICb-QR-rDU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-fN-eS9">
+                                        <rect key="frame" x="155" y="0.0" width="145" height="50"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Райт">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name=".SFNSText"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightBtn:" destination="aC5-l6-MtM" eventType="touchUpInside" id="iBx-5b-uVo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xgc-Du-eFg"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c1z-N8-hXa">
+                                <rect key="frame" x="27.5" y="261.5" width="265.5" height="65.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Ты проиграл, дятел, начинай заново">
+                                        <attributes>
+                                            <font key="NSFont" size="28" name=".SFNSDisplay"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhd-Yv-2rV">
+                                <rect key="frame" x="10" y="418" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nT2-pC-5Cm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ЗАНОВА"/>
+                                <connections>
+                                    <action selector="startAgain:" destination="aC5-l6-MtM" eventType="touchUpInside" id="5xK-SZ-TkB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4320" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygp-QK-ni0">
+                                <rect key="frame" x="251" y="49" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c1z-N8-hXa" firstAttribute="centerX" secondItem="eTe-vM-SBf" secondAttribute="centerX" id="MNB-l1-wnc"/>
+                            <constraint firstItem="eTe-vM-SBf" firstAttribute="trailing" secondItem="Mhd-Yv-2rV" secondAttribute="trailing" constant="10" id="fBp-Sh-F2k"/>
+                            <constraint firstItem="uAk-Zj-ntR" firstAttribute="leading" secondItem="eTe-vM-SBf" secondAttribute="leading" constant="10" id="fi8-U7-X5m"/>
+                            <constraint firstItem="c1z-N8-hXa" firstAttribute="centerY" secondItem="eTe-vM-SBf" secondAttribute="centerY" id="k0X-AI-Wj5"/>
+                            <constraint firstItem="Mhd-Yv-2rV" firstAttribute="leading" secondItem="eTe-vM-SBf" secondAttribute="leading" constant="10" id="qhX-wT-X1F"/>
+                            <constraint firstItem="eTe-vM-SBf" firstAttribute="bottom" secondItem="uAk-Zj-ntR" secondAttribute="bottom" constant="100" id="uak-cu-mJY"/>
+                            <constraint firstItem="eTe-vM-SBf" firstAttribute="trailing" secondItem="uAk-Zj-ntR" secondAttribute="trailing" constant="10" id="vIb-tF-EyZ"/>
+                            <constraint firstItem="eTe-vM-SBf" firstAttribute="bottom" secondItem="Mhd-Yv-2rV" secondAttribute="bottom" constant="100" id="zAG-uT-yCt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eTe-vM-SBf"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStack" destination="uAk-Zj-ntR" id="M2c-Q6-1qC"/>
+                        <outlet property="gameOver" destination="c1z-N8-hXa" id="ChZ-tb-QSU"/>
+                        <outlet property="gameOverBtn" destination="Mhd-Yv-2rV" id="RTI-Wu-g0c"/>
+                        <outlet property="scoreLabel" destination="Ygp-QK-ni0" id="11H-ll-EPS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWc-Lg-oPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="117"/>
+        </scene>
+    </scenes>
+</document>

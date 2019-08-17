@@ -104,10 +104,18 @@ class GameVC: UIViewController {
     }
     
     func heroMoveing(){
-        if leftMove == true && self.hero.frame.origin.x > 0 {
-            self.hero.frame.origin.x -= 5
-        }else if rightMove == true && hero.frame.maxX < self.view.frame.size.width{
-            self.hero.frame.origin.x += 5
+        if leftMove == true{
+            if self.hero.frame.origin.x > 0 {
+                self.hero.frame.origin.x -= 5
+            } else {
+                self.hero.frame.origin.x = self.view.frame.size.width
+                }
+        }else if rightMove == true{
+            if hero.frame.maxX < self.view.frame.size.width{
+                self.hero.frame.origin.x += 5
+            }else{
+                self.hero.frame.origin.x = 0 - self.hero.frame.size.width
+            }
         }
         GameVC.heroMaxX = self.hero.frame.maxX
         GameVC.heroX = self.hero.frame.origin.x
